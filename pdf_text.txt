@@ -1,0 +1,81 @@
+Task 4: Saf ety, Guar drails & Internal
+Evaluation
+📋 Overview
+In this task, y our objectiv e is t o implement clinical saf ety guar drails, calibr ate empirical
+confidence thr esholds, and per form end-t o-end e valuation using the Jup yter notebook:
+Task4_Safety_Evaluation.ipynb
+While earlier tasks established ingestion, r etrie val optimization, and gr ounded gener ation,
+Task 4 focuses on safety, verification, and def ense-in-depth . The objectiv e is t o ensur e the
+clinical assistant r eliably r efuses out-of-scope questions, detects hallucinated or unsuppor ted
+claims befor e the y reach clinicians, and pr oduces measur able e valuation metrics t o prove
+system r eadiness.
+🎯 Objectiv es
+By completing this task, y ou will:
+1. Empirically Calibr ate Confidence Thresholds : Analyz e retrie val scor e distributions
+across answer able vs. unanswer able questions t o set data-driv en confidence cut offs.
+2. Implement an Unsuppor ted-Claim Detect or: Build a secondar y saf ety net t o verify that
+claims in gener ated r ecommendations ha ve dir ect lexical and semantic backing in
+retrie ved e vidence.
+3. Benchmark End-t o-End P erformance : Run e valuations on a structur ed benchmark
+containing both clinical r etrie val queries and deliber ate r efusal/saf ety test cases.
+4. Measur e Key Evaluation Metrics : Compute quantitativ e evaluation metrics including
+Retrie val Pr ecision@k and Saf ety/Refusal P ass Rates.
+5. Diagnose & Isolate F ailur e Modes : Identify whether per formance bottlenecks originate
+from chunking/r etrie val or saf ety thr eshold calibr ation.
+🛠 Step-b y-Step Task Guide
+1. Setup & Envir onment
+Open Task4_Safety_Evaluation.ipynb.A
+RMARK WA
+ATERMARK WATERMA
+WATERMARK WATERMARK W
+RK WATERMARK WATERMARK WATERM
+RMARK WATERMARK WATERMARK WATERMARK W
+TERMARK WATERMARK WATERMARK WATERMARK WATERM
+WATERMARK WATERMARK WATERMARK WATERMARK WAT
+RK WATERMARK WATERMARK WATERMARK WATERMARK W
+MARK WATERMARK WATERMARK WATERMARK WATERMAR
+ERMARK WATERMARK WATERMARK WATERMARK WATERM
+WATERMARK WATERMARK WATERMARK WATERMARK WATE
+K WATERMARK WATERMARK WATERMARK WATERMARK WRun the setup cell t o rebuild/load the index and pr epar e evaluation dependencies.
+2. Calibr ate Retrie val Confidence Threshold
+Run r etrie val acr oss known answer able clinical questions and unanswer able/out-of-
+scope queries.
+Compar e the r esulting r etrie val scor e ranges t o identify the empirical boundar y gap.
+Select a data-back ed confidence thr eshold t o go vern aut omated r efusal beha vior.
+3. Implement Unsuppor ted-Claim Saf ety Net
+Implement sentence-le vel claim extr action and e vidence-o verlap v erification functions.
+Test the detect or against suppor ted clinical answers vs. drifted answers containing
+unsuppor ted specifics (e.g., ungr ounded dosages or inter vals).
+Verify that drifted claims ar e caught and flagged b y the saf ety check.
+4. Ex ecute Benchmark E valuation
+Ingest the benchmark e valuation dataset containing r etrie val questions and
+safety/r efusal test cases.
+Evaluate each test case for corr ect r etrie val matching (Pr ecision@k) or appr opriate
+refusal triggering.
+Calculate the aggr egate A verage Pr ecision@k and Saf ety Corr ect-Beha vior P ass Rate.
+5. Diagnose & Document Findings
+Review computed metrics t o isolate per formance bottlenecks (r etrie val vs. thr eshold
+calibr ation).
+Recor d calibr ated thr esholds and v erified per formance metrics for system pr esentation.
+✅ Acceptance Criteria (Definition of Done)
+ All cells in Task4_Safety_Evaluation.ipynb execute sequentially fr om t op to bott om
+without err ors.
+ Confidence thr eshold is calibr ated fr om empirical r etrie val scor e gaps r ather than
+arbitr ary guesses.
+ Unsuppor ted-claim detect or corr ectly v alidates suppor ted statements and flags
+drifted claims.
+ Benchmark e valuation ex ecutes acr oss all r etrie val and saf ety test cases.
+ Average Pr ecision@k and Saf ety P ass Rate ar e calculated and r epor ted with exact
+numbers.A
+RMARK WA
+ATERMARK WATERMA
+WATERMARK WATERMARK W
+RK WATERMARK WATERMARK WATERM
+RMARK WATERMARK WATERMARK WATERMARK W
+TERMARK WATERMARK WATERMARK WATERMARK WATERM
+WATERMARK WATERMARK WATERMARK WATERMARK WAT
+RK WATERMARK WATERMARK WATERMARK WATERMARK W
+MARK WATERMARK WATERMARK WATERMARK WATERMAR
+ERMARK WATERMARK WATERMARK WATERMARK WATERM
+WATERMARK WATERMARK WATERMARK WATERMARK WATE
+K WATERMARK WATERMARK WATERMARK WATERMARK W
